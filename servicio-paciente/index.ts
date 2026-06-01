@@ -19,7 +19,7 @@ const start = async () => {
         await sequelize.sync();
         app.log.info("Modelos sincronizados con la base de datos");
 
-        const port = Number(process.env.DB_PORT) || 3001;
+        const port = Number(process.env.APP_PORT) || 3001;
 
         app.listen({ port: port, host: "0.0.0.0" });
 

@@ -20,7 +20,7 @@ const iniciar = async()=>{
         await sequelize.sync();
         app.log.info("Tablas creadas en la base de daots");
 
-        const puerto = Number(process.env.PORT) || 3003;
+        const puerto = Number(process.env.APP_PORT) || 3003;
         app.listen({port:puerto, host:"0.0.0.0"})
 
     }catch(error){
